@@ -1117,6 +1117,16 @@ dependencies = [
 ]
 
 [[package]]
+name = "designcraft-ui-martensite"
+version = "0.2.1"
+dependencies = [
+ "proptest",
+ "serde",
+ "serde_json",
+ "tracing",
+]
+
+[[package]]
 name = "designcraft-web"
 version = "0.2.1"
 dependencies = [
