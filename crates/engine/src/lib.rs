@@ -54,6 +54,28 @@ impl From<designcraft_doc::DocError> for EngineError {
 
 pub type Result<T> = std::result::Result<T, EngineError>;
 
+/// The application engine: documents, commands, history and tool state.
+/// Named `Engine` so UIs (egui, Martensite, headless) refer to one type.
+pub type Engine = Session;
+
+/// Toolbox tool identity, in InDesign order. UI-agnostic so every front-end
+/// shares the canonical list; each UI maps it to its own presentation.
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Hash)]
+pub enum Tool {
+    Selection,
+    DirectSelection,
+    Type,
+    Line,
+    Pen,
+    Pencil,
+    RectangleFrame,
+    Rectangle,
+    Scissors,
+    FreeTransform,
+    Hand,
+    Zoom,
+}
+
 #[derive(Clone, Debug)]
 pub struct HistoryEntry {
     pub label: String,

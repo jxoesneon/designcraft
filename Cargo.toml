@@ -28,6 +28,7 @@ designcraft-format = { path = "crates/format" }
 designcraft-tools = { path = "crates/tools" }
 designcraft-engine = { path = "crates/engine" }
 designcraft-ui-egui = { path = "crates/ui-egui" }
+designcraft-ui-martensite = { path = "crates/ui-martensite" }
 designcraft-mcp = { path = "crates/mcp" }
 designcraft-testkit = { path = "crates/testkit" }
 
